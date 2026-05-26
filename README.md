@@ -34,6 +34,17 @@ The architecture distinction is:
 
 Lower layers may implement processes and tools, but they may not redefine governance, evidence semantics, boundaries, or normative scope established here.
 
+## Governance Anchors
+
+The current minimum governance anchors are:
+- Governance Core: `docs/governance-core.md`
+- Declared Sources Catalog: `docs/declared-sources-catalog.md`
+- Change Control Protocol: `protocols/change-control-protocol.md`
+- Normative Document Registry: `docs/normative-document-registry.md`
+
+These documents were added as the minimum remediation response to external Claude audit findings recorded in:
+- `reports/CLAUDE_EXTERNAL_GOVERNANCE_AUDIT_V1.md`
+
 ## Scope
 
 This repository is limited to institutional governance documentation for SAD Moron.
@@ -99,8 +110,11 @@ Structure notes:
 At this stage, this repository is a base scaffold.
 
 Normative intent begins in the documents that explicitly define:
+- governance core
 - scope and boundaries
 - normative framework
+- declared source catalog
+- normative document registry
 - conceptual protocols
 
 Directories reserved for future growth must remain empty of executable code unless a later governance decision expands scope.
