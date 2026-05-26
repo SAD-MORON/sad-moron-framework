@@ -14,6 +14,26 @@ Its purpose is to define:
 This repository does not implement runtime systems, APIs, Apps Script automation, or agent workflows.
 This repository does not execute.
 
+## Protocol-Driven Governance Architecture
+
+`SAD-MORON-FRAMEWORK` defines governance first and implementation later.
+
+The repository exists to stabilize:
+- protocol meaning
+- declared boundaries
+- evidence rules
+- normative scope
+- repository separation across future SAD Moron layers
+
+The architecture distinction is:
+- framework layer: governance, protocols, boundaries, and normative meaning
+- runtime layer: future ingestion and normalization execution in separate repos
+- connectors layer: future source-specific adapters in separate repos
+- operations layer: real institutional use over declared sources and workflows
+- audit layer: future append-only review and reconstruction in separate repos
+
+Lower layers may implement processes and tools, but they may not redefine governance, evidence semantics, boundaries, or normative scope established here.
+
 ## Scope
 
 This repository is limited to institutional governance documentation for SAD Moron.
@@ -66,14 +86,13 @@ The repository does not import Janus architecture, Janus runtime code, or Janus 
 ├── docs/
 ├── protocols/
 ├── reports/
-└── schemas/
+└── .gitignore
 ```
 
 Structure notes:
 - `docs/` holds bounded explanatory and normative-facing documentation
 - `protocols/` holds conceptual operational rules only
 - `reports/` holds analysis and governance review outputs
-- `schemas/` should exist only when it contains conceptual contracts that support the governance layer
 
 ## Normative Status
 
