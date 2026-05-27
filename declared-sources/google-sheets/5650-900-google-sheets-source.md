@@ -1,0 +1,64 @@
+# 5650-900 Google Sheets Declared Source Draft
+
+- source name: `5650-900` Google Sheets protected draft source
+- source type: Google Sheets
+- institutional owner: pending confirmation
+- access method:
+  - metadata-first access only
+  - `SHEET_ID_PLACEHOLDER`
+  - no real Sheet IDs in Git
+  - institutional authorization required before any live source access
+- related workflow:
+  - `workflows/excedentes/5650-900-workflow.md`
+- normative references:
+  - `normative/resoluciones/resolucion-5650-placeholder.md`
+  - Resolution `5650` / `900` relationship: pending confirmation
+  - `protocols/sensitive-data-protection-protocol.md`
+- allowed use:
+  - source declaration
+  - metadata-first structural review
+  - workflow dependency registration
+  - future bounded omission review on existence, status, timestamps, and expected-event metadata if authorized
+- excluded use:
+  - copying real spreadsheet rows into Git
+  - copying personally identifiable administrative records
+  - storing credentials, tokens, or secrets
+  - unapproved direct operational access
+  - write-capable interaction before read-only first review
+- temporal relevance:
+  - operational period pending confirmation
+  - any review period must be declared before omission analysis
+- known limitations:
+  - normative relationship between Resolution `5650` and `900` is pending confirmation
+  - institutional owner is pending confirmation
+  - real spreadsheet structure is not yet verified
+  - this record does not authorize operational use
+- sensitive data risk: high
+- sensitive data risk classification:
+  - high risk draft source because a spreadsheet in this workflow class may contain names, DNI, CUIL, contact data, employment status, health or license data, disciplinary data, salary or liquidation data, or other personally identifiable administrative records
+- minimum necessary fields:
+  - sheet existence
+  - tab names
+  - column names
+  - row counts
+  - timestamps
+  - non-identifying workflow status markers
+- institutional authorization required:
+  - yes
+  - authorization basis pending confirmation
+- read-only first access:
+  - required
+  - no write-capable interaction allowed in draft stage
+- metadata-first testing viability:
+  - yes
+  - metadata-first access only until institutional authorization and workflow confirmation exist
+- connector mapping:
+  - future connector mapping: `SAD-MORON-CONNECTORS/connectors/5650-900/`
+- Apps Script mapping:
+  - future Apps Script package: `SAD-MORON-APPSCRIPT/packages/5650-900/`
+- audit expectations:
+  - no real data in Git
+  - no credentials in Git
+  - preserve protected draft status
+  - evidence should use anonymization, hashing, aggregation, or metadata-only references where possible
+- declaration status: Protected draft declared source under sensitive data protection boundary

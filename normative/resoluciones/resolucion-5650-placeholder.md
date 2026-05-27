@@ -1,0 +1,29 @@
+# Resolution 5650 Placeholder
+
+- title: Resolution `5650` placeholder record
+- type: resolution placeholder
+- authority: pending confirmation
+- jurisdiction: pending confirmation
+- official source link: pending confirmation
+- institutional scope:
+  - placeholder only
+  - no legal content declared in this draft
+- affected SAD processes:
+  - possible relationship to excedentes workflow registration
+  - pending confirmation
+- expected events:
+  - pending confirmation
+- temporal effects:
+  - pending confirmation
+- rights / obligations:
+  - not declared
+  - legal content must not be invented
+- connector implications:
+  - none declared at placeholder stage
+- Apps Script implications:
+  - no implementation implications until normative confirmation
+- exclusions:
+  - no legal interpretation
+  - no invented legal content
+  - Resolution `5650` / `900` relationship remains pending confirmation
+- review status: Placeholder normative record pending confirmation

@@ -1,0 +1,65 @@
+# 5650-900 Workflow Draft
+
+- workflow name: `5650-900` spreadsheet workflow draft
+- institutional purpose: Preliminary registration of a protected spreadsheet-based workflow related to excedentes handling under bounded governance review. Operational purpose remains draft pending institutional confirmation.
+- normative references:
+  - `normative/resoluciones/resolucion-5650-placeholder.md`
+  - Resolution `5650` / `900` relationship: pending confirmation
+  - `protocols/sensitive-data-protection-protocol.md`
+- operational sources:
+  - Protected draft Google Sheets source registered as metadata-first only
+- declared source dependencies:
+  - `declared-sources/google-sheets/5650-900-google-sheets-source.md`
+- expected events:
+  - spreadsheet existence
+  - sheet or tab presence
+  - timestamp availability
+  - workflow status markers
+  - record presence indicators without copying personal data
+- responsible actors:
+  - institutional owner: pending confirmation
+  - SAD operational actors: pending confirmation
+  - review authority for protected access: institutional authorization required before access
+- temporal window:
+  - pending confirmation
+  - any future review window must be declared before omission analysis
+- Google Sheets / Drive dependencies:
+  - Google Sheets draft source with `SHEET_ID_PLACEHOLDER`
+  - no Drive dependency declared in this draft
+- minimum necessary fields:
+  - sheet existence
+  - tab names
+  - column names
+  - row counts
+  - last modified timestamp if institutionally available
+  - workflow status indicators if non-identifying
+- excluded fields:
+  - names
+  - DNI
+  - CUIL
+  - contact data
+  - employment status details beyond non-identifying workflow state
+  - health or license data
+  - disciplinary data
+  - salary or liquidation data
+  - any copied personally identifiable administrative record
+- omission detection metadata strategy:
+  - omission review, if later authorized, must operate first on existence, status, timestamps, and expected-event metadata
+  - no personal data copying into Git
+  - no real row-level extracts in this repository
+- automation eligibility:
+  - not eligible for implementation until normative relationship is confirmed
+  - metadata-first analysis only
+  - future Apps Script package: `SAD-MORON-APPSCRIPT/packages/5650-900/`
+- audit expectations:
+  - preserve documentation-first registration
+  - record pending normative confirmation
+  - record institutional authorization boundary before any sensitive access
+  - preserve evidence as anonymized, hashed, aggregated, or metadata-only when possible
+- exclusions:
+  - no real data in Git
+  - no credentials
+  - no Apps Script code
+  - no connector implementation in this repository
+  - no legal interpretation of Resolution `5650` or `900`
+- review status: Protected draft under sensitive data protection boundary
