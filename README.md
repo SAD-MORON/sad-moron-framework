@@ -206,3 +206,10 @@ Conceptual source:
 
 Canonical repository governance source:
 - `docs/repository-governance-standard.md`
+
+## Licensing
+
+Licensing and attribution references:
+- `LICENSE`
+- `NOTICE`
+- `docs/repository-governance-standard.md`

@@ -1,0 +1,13 @@
+SAD-MORON Framework
+
+Governance/documentation layer.
+
+Initial governance architecture:
+Martín Nicolás Sánchez Morales
+
+This work inherits governance principles from Janus Core and selectively applies governance principles derived from Janus Core.
+
+Licensed under the Apache License, Version 2.0.
+See LICENSE for the full license text.
+
+Operational connectors and integrations may remain external or separately governed where repository boundaries require it.
