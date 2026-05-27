@@ -10,9 +10,14 @@ Its purpose is to define:
 - expected administrative events
 - omission review rules
 - normative and operational boundaries
+- normative sources
+- operational workflows
+- declared institutional sources
 
 This repository does not implement runtime systems, APIs, Apps Script automation, or agent workflows.
 This repository does not execute.
+
+Apps Script, connectors, and future runtime implementations must reference the normative, workflow, and declared-source layers in this repository before implementation continues.
 
 ## Protocol-Driven Governance Architecture
 
@@ -27,12 +32,16 @@ The repository exists to stabilize:
 
 The architecture distinction is:
 - framework layer: governance, protocols, boundaries, and normative meaning
+- normative layer: legal and institutional authority documents that constrain SAD action
+- workflow layer: operational institutional processes derived from bounded normative scope
+- declared sources layer: operational Google Sheets, Drive documents, Forms, and instructivos used within approved workflows
 - runtime layer: future ingestion and normalization execution in separate repos
 - connectors layer: future source-specific adapters in separate repos
 - operations layer: real institutional use over declared sources and workflows
 - audit layer: future append-only review and reconstruction in separate repos
 
 Lower layers may implement processes and tools, but they may not redefine governance, evidence semantics, boundaries, or normative scope established here.
+Operational Google Sheets and Drive artifacts may support workflows, but they do not carry the same authority as legal or normative source documents.
 
 ## Governance Anchors
 
@@ -54,6 +63,9 @@ Initial in-scope areas:
 - conceptual protocol documents
 - source and schema planning
 - architectural layer definitions
+- normative source registration
+- workflow registration
+- declared source registration
 
 Initial out-of-scope areas:
 - runtime code
@@ -94,13 +106,19 @@ The repository does not import Janus architecture, Janus runtime code, or Janus 
 
 ```text
 .
+├── declared-sources/
 ├── docs/
+├── normative/
 ├── protocols/
 ├── reports/
+├── workflows/
 └── .gitignore
 ```
 
 Structure notes:
+- `normative/` holds structured records for legal, regulatory, and institutional authority sources
+- `workflows/` holds structured records for bounded SAD operational workflows
+- `declared-sources/` holds structured records for operational Google Sheets, Drive, Forms, and instructive sources
 - `docs/` holds bounded explanatory and normative-facing documentation
 - `protocols/` holds conceptual operational rules only
 - `reports/` holds analysis and governance review outputs
