@@ -2,7 +2,9 @@
 
 ## Purpose
 
-`SAD-MORON-FRAMEWORK` is a documentation-first repository for a clean institutional governance implementation inspired by selected Janus principles.
+`SAD-MORON-FRAMEWORK` is a governance-first, documentation-first repository for bounded institutional governance definitions.
+
+This repository inherits governance principles from Janus Core and selectively applies governance principles derived from Janus Core without implying dependency on the full Janus runtime ecosystem.
 
 Its purpose is to define:
 - bounded governance concepts
@@ -13,11 +15,19 @@ Its purpose is to define:
 - normative sources
 - operational workflows
 - declared institutional sources
+- repository governance standards for future SAD repositories
+
+Initial governance architecture:
+Martín Nicolás Sánchez Morales
 
 This repository does not implement runtime systems, APIs, Apps Script automation, or agent workflows.
 This repository does not execute.
 
 Apps Script, connectors, and future runtime implementations must reference the normative, workflow, and declared-source layers in this repository before implementation continues.
+
+Repository governance for future SAD repositories is canonically defined in:
+- `docs/repository-governance-standard.md`
+- `docs/governance-inheritance.md`
 
 ## Protocol-Driven Governance Architecture
 
@@ -48,6 +58,8 @@ Operational Google Sheets and Drive artifacts may support workflows, but they do
 
 The current minimum governance anchors are:
 - Governance Core: `docs/governance-core.md`
+- Repository Governance Standard: `docs/repository-governance-standard.md`
+- Governance Inheritance: `docs/governance-inheritance.md`
 - Declared Sources Catalog: `docs/declared-sources-catalog.md`
 - Change Control Protocol: `protocols/change-control-protocol.md`
 - Normative Document Registry: `docs/normative-document-registry.md`
@@ -79,6 +91,9 @@ Initial out-of-scope areas:
 - real sensitive operational data in Git
 - credentials, tokens, or secrets in Git
 
+Governance and documentation layers may remain public.
+Operational connectors, runtime integrations, credentials, institutional mappings, and production adapters may remain bounded, external, or private when institutional security or operational constraints require it.
+
 ## Boundaries
 
 SAD Moron governance in this repository is bounded by:
@@ -98,16 +113,36 @@ Lower layers must also preserve the distinction between omission detection on ex
 
 ## Janus Adaptation
 
-This repository uses the adaptation review in `reports/SAD_MORON_JANUS_ADAPTATION_REVIEW_V1.md` as its conceptual source.
+This repository uses the adaptation review in `reports/SAD_MORON_JANUS_ADAPTATION_REVIEW_V1.md` as a conceptual source.
 
-The safe Janus-inspired concepts adopted here are:
+The governance principles selectively applied here include:
 - `E+` and `E-` evidence distinction
 - append-only institutional history
 - deterministic reconstruction of review context
 - omission detection under declared scope
 - explicit human accountability boundaries
 
-The repository does not import Janus architecture, Janus runtime code, or Janus operational complexity.
+The repository does not import the full Janus runtime architecture, Janus runtime code, or Janus operational complexity.
+
+## Repository Governance Posture
+
+This repository adopts the following posture:
+- governance-first
+- documentation-first
+- bounded execution
+- institutional continuity
+- auditability
+- interoperability
+
+These standards are intended to remain institutionally usable beyond the original author set and applicable across future SAD repositories.
+
+## Licensing and Boundary Posture
+
+The repository governance standard declares Apache License 2.0 as the default license for SAD governance and documentation repositories.
+
+This repository separates:
+- public governance, workflows, taxonomy, synthetic scaffolds, documentation, and audit posture
+- bounded or potentially private connectors, runtime integrations, credentials, operational deployments, institutional mappings, and production adapters
 
 ## Repository Structure
 
@@ -129,6 +164,10 @@ Structure notes:
 - `docs/` holds bounded explanatory and normative-facing documentation
 - `protocols/` holds conceptual operational rules, including sensitive data protection requirements
 - `reports/` holds analysis and governance review outputs
+
+Recommended SAD repository areas may also include:
+- `audit/`
+- `packages/` when applicable
 
 ## Normative Status
 
@@ -164,3 +203,6 @@ This repository does not:
 
 Conceptual source:
 - `reports/SAD_MORON_JANUS_ADAPTATION_REVIEW_V1.md`
+
+Canonical repository governance source:
+- `docs/repository-governance-standard.md`
