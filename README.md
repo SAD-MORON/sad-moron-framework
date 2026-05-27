@@ -29,6 +29,7 @@ Repository governance for future SAD repositories is canonically defined in:
 - `docs/repository-governance-standard.md`
 - `docs/governance-inheritance.md`
 - `docs/pilot-context-and-governance-primitives.md`
+- `docs/AI_AGENT_GUIDE.md`
 
 ## Protocol-Driven Governance Architecture
 
