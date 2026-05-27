@@ -28,6 +28,7 @@ Apps Script, connectors, and future runtime implementations must reference the n
 Repository governance for future SAD repositories is canonically defined in:
 - `docs/repository-governance-standard.md`
 - `docs/governance-inheritance.md`
+- `docs/pilot-context-and-governance-primitives.md`
 
 ## Protocol-Driven Governance Architecture
 
