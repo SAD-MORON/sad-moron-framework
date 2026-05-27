@@ -11,6 +11,11 @@
 - temporal relevance:
 - known limitations:
 - sensitive data risk:
+- sensitive data risk classification:
+- minimum necessary fields:
+- institutional authorization required:
+- read-only first access:
+- metadata-first testing viability:
 - connector mapping:
 - Apps Script mapping:
 - audit expectations:

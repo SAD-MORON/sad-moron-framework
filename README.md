@@ -29,6 +29,7 @@ The repository exists to stabilize:
 - evidence rules
 - normative scope
 - repository separation across future SAD Moron layers
+- sensitive data protection boundaries
 
 The architecture distinction is:
 - framework layer: governance, protocols, boundaries, and normative meaning
@@ -50,6 +51,7 @@ The current minimum governance anchors are:
 - Declared Sources Catalog: `docs/declared-sources-catalog.md`
 - Change Control Protocol: `protocols/change-control-protocol.md`
 - Normative Document Registry: `docs/normative-document-registry.md`
+- Sensitive Data Protection Protocol: `protocols/sensitive-data-protection-protocol.md`
 
 These documents were added as the minimum remediation response to external Claude audit findings recorded in:
 - `reports/CLAUDE_EXTERNAL_GOVERNANCE_AUDIT_V1.md`
@@ -74,6 +76,8 @@ Initial out-of-scope areas:
 - API implementation
 - generalized AI tooling
 - infrastructure orchestration
+- real sensitive operational data in Git
+- credentials, tokens, or secrets in Git
 
 ## Boundaries
 
@@ -86,8 +90,11 @@ SAD Moron governance in this repository is bounded by:
 
 No claim should rely on hidden sources, inferred authority, or undefined review scope.
 
+Sensitive operational data must remain outside Git. Workflow planning in this repository must use metadata-first reasoning, minimum necessary fields, and explicit authorization boundaries before any real spreadsheet source is touched.
+
 This repository governs future implementation repositories.
 Lower layers may implement ingestion, normalization, integration, and operational workflows, but they may not redefine governance, evidence semantics, boundaries, or normative scope established here.
+Lower layers must also preserve the distinction between omission detection on existence, status, or timestamps and the prohibited copying of unnecessary personal data.
 
 ## Janus Adaptation
 
@@ -120,7 +127,7 @@ Structure notes:
 - `workflows/` holds structured records for bounded SAD operational workflows
 - `declared-sources/` holds structured records for operational Google Sheets, Drive, Forms, and instructive sources
 - `docs/` holds bounded explanatory and normative-facing documentation
-- `protocols/` holds conceptual operational rules only
+- `protocols/` holds conceptual operational rules, including sensitive data protection requirements
 - `reports/` holds analysis and governance review outputs
 
 ## Normative Status
@@ -150,6 +157,8 @@ This repository does not:
 - host connector implementations
 - execute omission detection automatically
 - make accountable decisions without human authority
+- store real personal administrative data in Git
+- store credentials, tokens, or secrets in Git
 
 ## Reference
 

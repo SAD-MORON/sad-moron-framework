@@ -9,6 +9,9 @@
 - responsible actors:
 - temporal window:
 - Google Sheets / Drive dependencies:
+- minimum necessary fields:
+- excluded fields:
+- omission detection metadata strategy:
 - automation eligibility:
 - audit expectations:
 - exclusions:
