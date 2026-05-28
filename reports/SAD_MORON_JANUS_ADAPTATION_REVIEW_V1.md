@@ -2,8 +2,8 @@
 
 Date: 2026-05-26
 Scope reviewed:
-- `/Users/martinsanchezmorales/Janus/janus-governance-core`
-- `/Users/martinsanchezmorales/Janus/janus-framework-stack`
+- `janus-governance-core/`
+- `janus-framework-stack/`
 
 ## Executive Summary
 
