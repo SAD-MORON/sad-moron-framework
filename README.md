@@ -2,9 +2,13 @@
 
 ## Purpose
 
-`SAD-MORON-FRAMEWORK` is a governance-first, documentation-first repository for bounded institutional governance definitions.
+`SAD-MORON-FRAMEWORK` is a governance-first, documentation-first repository for a bounded institutional pilot related to the Secretaria de Asuntos Docentes (SAD) of Moron District, Provincia de Buenos Aires, Argentina, within the broader institutional context of the Direccion General de Cultura y Educacion.
 
-This repository inherits governance principles from Janus Core and selectively applies governance principles derived from Janus Core without implying dependency on the full Janus runtime ecosystem.
+This repository is intended to clarify governance definitions, documentation posture, and repository boundaries for that pilot context without claiming official endorsement, representation, or publication by the Provincia de Buenos Aires, the Direccion General de Cultura y Educacion, or SAD Moron itself.
+
+The pilot posture is intentionally bounded: this repository documents governance assumptions, declared sources, workflows, and control boundaries for review and institutional alignment before any separate runtime implementation is considered.
+
+This repository selectively applies governance principles derived from Janus Core without implying dependency on any full Janus runtime ecosystem.
 
 Its purpose is to define:
 - bounded governance concepts
@@ -16,9 +20,6 @@ Its purpose is to define:
 - operational workflows
 - declared institutional sources
 - repository governance standards for future SAD repositories
-
-Initial governance architecture:
-Martín Nicolás Sánchez Morales
 
 This repository does not implement runtime systems, APIs, Apps Script automation, or agent workflows.
 This repository does not execute.
