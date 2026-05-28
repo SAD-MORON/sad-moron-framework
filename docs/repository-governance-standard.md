@@ -137,6 +137,18 @@ Not every SAD repository must contain every area.
 
 Structure should remain proportional to repository purpose and should not create runtime sprawl where governance documentation is the actual scope.
 
+## Governance Document Metadata Convention
+
+Canonical and normative governance documents should be able to adopt a lightweight metadata surface when repository maturity requires it.
+
+Recommended minimum metadata fields:
+- `version`
+- `status`
+- `last-reviewed`
+- `reviewed-by`
+
+This convention is intended to improve traceability and review continuity without implying runtime behavior or unnecessary process expansion.
+
 ## Governance States
 
 Repositories should use simple governance states:

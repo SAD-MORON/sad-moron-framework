@@ -93,6 +93,15 @@ Corrections, refinements, or superseding decisions should add to the decision tr
 
 Git history helps preserve this trail, but the governance intent must also remain explicit in the document set and associated decision artifacts.
 
+## Repository History Integrity
+
+Where repository platform controls are available, governance repositories should preserve history integrity through controls such as:
+- branch protection on the primary branch
+- anti-force-push governance
+- append-only operational controls for governance history
+
+These controls strengthen repository history preservation, but they do not replace accountable human review or the documented governance decision trail.
+
 ## Prohibition on Silent Governance Changes
 
 Silent governance changes are prohibited.

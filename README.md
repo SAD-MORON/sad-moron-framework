@@ -68,7 +68,9 @@ The current minimum governance anchors are:
 - Sensitive Data Protection Protocol: `protocols/sensitive-data-protection-protocol.md`
 
 These documents were added as the minimum remediation response to external Claude audit findings recorded in:
-- `reports/CLAUDE_EXTERNAL_GOVERNANCE_AUDIT_V1.md`
+- [Claude External Governance Audit V1](./reports/CLAUDE_EXTERNAL_GOVERNANCE_AUDIT_V1.md)
+- [Claude External Governance Audit V2](./reports/CLAUDE_EXTERNAL_GOVERNANCE_AUDIT_V2.md)
+- [Claude External Governance Audit V2 Response](./reports/CLAUDE_EXTERNAL_GOVERNANCE_AUDIT_V2_RESPONSE.md)
 
 ## Scope
 
@@ -167,9 +169,13 @@ Structure notes:
 - `protocols/` holds conceptual operational rules, including sensitive data protection requirements
 - `reports/` holds analysis and governance review outputs
 
+At the current pilot stage, `reports/` is the active repository surface for governance reviews, audit responses, and related traceability artifacts.
+
 Recommended SAD repository areas may also include:
 - `audit/`
 - `packages/` when applicable
+
+Where a future dedicated `audit/` area is added, it should complement `reports/` rather than silently redefine current governance review history.
 
 ## Normative Status
 
@@ -204,7 +210,12 @@ This repository does not:
 ## Reference
 
 Conceptual source:
-- `reports/SAD_MORON_JANUS_ADAPTATION_REVIEW_V1.md`
+- [SAD Moron Janus Adaptation Review V1](./reports/SAD_MORON_JANUS_ADAPTATION_REVIEW_V1.md)
+
+Governance review chain:
+- [Claude External Governance Audit V1](./reports/CLAUDE_EXTERNAL_GOVERNANCE_AUDIT_V1.md)
+- [Claude External Governance Audit V2](./reports/CLAUDE_EXTERNAL_GOVERNANCE_AUDIT_V2.md)
+- [Claude External Governance Audit V2 Response](./reports/CLAUDE_EXTERNAL_GOVERNANCE_AUDIT_V2_RESPONSE.md)
 
 Canonical repository governance source:
 - `docs/repository-governance-standard.md`
