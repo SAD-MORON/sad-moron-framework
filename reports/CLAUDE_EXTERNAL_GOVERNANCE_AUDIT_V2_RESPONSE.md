@@ -21,7 +21,7 @@ This response records the current remediation posture so the audit -> remediatio
 
 | Finding | Status | Remediation posture | Notes |
 |---|---|---|---|
-| F-01 | PARTIALLY REMEDIATED | README traceability improvements are being applied through direct document linking and explicit V2 response registration | Audit-response linkage is now being made more visible in the repository surface |
+| F-01 | PARTIALLY REMEDIATED | README traceability improvements are being applied through stable `reports/` directory traceability and explicit V2 response registration | Audit artifacts and remediation tracking are now being made more visible in the repository surface |
 | F-02 | UNDER REVIEW | Iterative governance hardening during pilot maturation | Layer separation is already declared; conformance and cross-repository enforcement remain a later hardening area |
 | F-03 | ACCEPTED | High-priority governance hardening | Repository governance should formalize branch protection expectations, anti-force-push governance, and append-only operational controls |
 | F-04 | UNDER REVIEW | Iterative governance hardening during pilot maturation | Janus Core inheritance wording is normalized; source anchoring and inheritance traceability can be hardened further over time |
@@ -85,7 +85,7 @@ The current repository already establishes governance inheritance, repository se
 
 **Status:** `PARTIALLY REMEDIATED`
 
-README and document-linking improvements have already been introduced as part of the broader governance hardening surface, and this response adds direct V2 traceability within the repository review chain.
+README and repository traceability improvements have already been introduced as part of the broader governance hardening surface, and this response adds audit artifacts and remediation tracking maintained under `reports/` within the repository review chain.
 
 Remaining work is primarily navigational and documentary rather than architectural.
 
