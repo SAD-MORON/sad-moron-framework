@@ -2,9 +2,9 @@
 
 ## Purpose
 
-`SAD-MORON-FRAMEWORK` is a governance-first, documentation-first repository for a bounded institutional pilot related to the Secretaria de Asuntos Docentes (SAD) of Moron District, Provincia de Buenos Aires, Argentina, within the broader institutional context of the Direccion General de Cultura y Educacion.
+`SAD-MORON-FRAMEWORK` is a governance-first, documentation-first repository for a bounded institutional pilot related to the Secretaria de Asuntos Docentes (SAD) of Morón District, Provincia de Buenos Aires, Argentina, within the broader institutional context of the Dirección General de Cultura y Educación (DGCyE).
 
-This repository is intended to clarify governance definitions, documentation posture, and repository boundaries for that pilot context without claiming official endorsement, representation, or publication by the Provincia de Buenos Aires, the Direccion General de Cultura y Educacion, or SAD Moron itself.
+This repository is intended to clarify governance definitions, documentation posture, and repository boundaries for that pilot context without claiming official endorsement, representation, or publication by the Provincia de Buenos Aires, the Direccion General de Cultura y Educacion, or SAD Morón itself.
 
 The pilot posture is intentionally bounded: this repository documents governance assumptions, declared sources, workflows, and control boundaries for review and institutional alignment before any separate runtime implementation is considered.
 
