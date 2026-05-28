@@ -69,8 +69,8 @@ The current minimum governance anchors are:
 
 These documents were added as the minimum remediation response to external Claude audit findings recorded in:
 - [Claude External Governance Audit V1](./reports/CLAUDE_EXTERNAL_GOVERNANCE_AUDIT_V1.md)
-- [Claude External Governance Audit V2](./reports/CLAUDE_EXTERNAL_GOVERNANCE_AUDIT_V2.md)
-- [Claude External Governance Audit V2 Response](./reports/CLAUDE_EXTERNAL_GOVERNANCE_AUDIT_V2_RESPONSE.md)
+
+Governance evidence, audit artifacts, and remediation tracking are maintained in the `reports/` directory.
 
 ## Scope
 
@@ -214,8 +214,8 @@ Conceptual source:
 
 Governance review chain:
 - [Claude External Governance Audit V1](./reports/CLAUDE_EXTERNAL_GOVERNANCE_AUDIT_V1.md)
-- [Claude External Governance Audit V2](./reports/CLAUDE_EXTERNAL_GOVERNANCE_AUDIT_V2.md)
-- [Claude External Governance Audit V2 Response](./reports/CLAUDE_EXTERNAL_GOVERNANCE_AUDIT_V2_RESPONSE.md)
+
+Governance evidence, audit artifacts, and remediation tracking are maintained in the `reports/` directory.
 
 Canonical repository governance source:
 - `docs/repository-governance-standard.md`
