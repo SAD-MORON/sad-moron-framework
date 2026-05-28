@@ -2,13 +2,9 @@
 
 ## Purpose
 
-`SAD-MORON-FRAMEWORK` is a governance-first, documentation-first repository for a bounded institutional pilot related to the Secretaria de Asuntos Docentes (SAD) of Morón District, Provincia de Buenos Aires, Argentina, within the broader institutional context of the Dirección General de Cultura y Educación (DGCyE).
+`SAD-MORON-FRAMEWORK` is a governance-first, documentation-first repository for a bounded institutional pilot related to the Secretaria de Asuntos Docentes (SAD) of Morón District, Provincia de Buenos Aires, Argentina, within the broader institutional context of the Dirección General de Cultura y Educación (DGCyE). It defines governance assumptions, declared sources, workflows, and control boundaries before any separate implementation layer is considered.
 
-This repository is intended to clarify governance definitions, documentation posture, and repository boundaries for that pilot context without claiming official endorsement, representation, or publication by the Provincia de Buenos Aires, the Direccion General de Cultura y Educacion, or SAD Morón itself.
-
-The pilot posture is intentionally bounded: this repository documents governance assumptions, declared sources, workflows, and control boundaries for review and institutional alignment before any separate runtime implementation is considered.
-
-This repository selectively applies governance principles derived from Janus Core without implying dependency on any full Janus runtime ecosystem.
+This repository selectively applies governance principles derived from Janus Core and serves as a stable framework repository for future SAD governance and documentation work under a bounded pilot posture.
 
 Its purpose is to define:
 - bounded governance concepts
@@ -21,10 +17,7 @@ Its purpose is to define:
 - declared institutional sources
 - repository governance standards for future SAD repositories
 
-This repository does not implement runtime systems, APIs, Apps Script automation, or agent workflows.
-This repository does not execute.
-
-Apps Script, connectors, and future runtime implementations must reference the normative, workflow, and declared-source layers in this repository before implementation continues.
+This repository does not implement runtime systems, APIs, Apps Script automation, or agent workflows. Future runtime implementations must reference the normative, workflow, and declared-source layers defined here.
 
 Repository governance for future SAD repositories is canonically defined in:
 - `docs/repository-governance-standard.md`
@@ -34,15 +27,7 @@ Repository governance for future SAD repositories is canonically defined in:
 
 ## Protocol-Driven Governance Architecture
 
-`SAD-MORON-FRAMEWORK` defines governance first and implementation later.
-
-The repository exists to stabilize:
-- protocol meaning
-- declared boundaries
-- evidence rules
-- normative scope
-- repository separation across future SAD Moron layers
-- sensitive data protection boundaries
+`SAD-MORON-FRAMEWORK` defines governance first and implementation later. The repository stabilizes protocol meaning, declared boundaries, evidence rules, normative scope, repository separation across future SAD Morón layers, and sensitive data protection boundaries.
 
 The architecture distinction is:
 - framework layer: governance, protocols, boundaries, and normative meaning
@@ -54,8 +39,7 @@ The architecture distinction is:
 - operations layer: real institutional use over declared sources and workflows
 - audit layer: future append-only review and reconstruction in separate repos
 
-Lower layers may implement processes and tools, but they may not redefine governance, evidence semantics, boundaries, or normative scope established here.
-Operational Google Sheets and Drive artifacts may support workflows, but they do not carry the same authority as legal or normative source documents.
+Lower layers may implement processes and tools, but they may not redefine governance, evidence semantics, boundaries, or normative scope established here. Operational Google Sheets and Drive artifacts may support workflows, but they do not carry the same authority as legal or normative source documents.
 
 ## Governance Anchors
 
@@ -68,14 +52,11 @@ The current minimum governance anchors are:
 - Normative Document Registry: `docs/normative-document-registry.md`
 - Sensitive Data Protection Protocol: `protocols/sensitive-data-protection-protocol.md`
 
-These documents were added as the minimum remediation response to external Claude audit findings recorded in:
-- [Claude External Governance Audit V1](./reports/CLAUDE_EXTERNAL_GOVERNANCE_AUDIT_V1.md)
-
-Governance evidence, audit artifacts, and remediation tracking are maintained in the `reports/` directory.
+Governance evidence, adaptation reviews, audit artifacts, and remediation tracking are maintained in the `reports/` directory.
 
 ## Scope
 
-This repository is limited to institutional governance documentation for SAD Moron.
+This repository is limited to institutional governance documentation for SAD Morón.
 
 Initial in-scope areas:
 - normative governance definitions
@@ -101,24 +82,19 @@ Operational connectors, runtime integrations, credentials, institutional mapping
 
 ## Boundaries
 
-SAD Moron governance in this repository is bounded by:
+SAD Morón governance in this repository is bounded by:
 - declared sources
 - expected administrative events
 - defined review periods
 - explicit normative rules
 - explicit operational rules
 
-No claim should rely on hidden sources, inferred authority, or undefined review scope.
+No claim should rely on hidden sources, inferred authority, or undefined review scope. Sensitive operational data must remain outside Git, and workflow planning in this repository must use metadata-first reasoning, minimum necessary fields, and explicit authorization boundaries before any real spreadsheet source is touched.
 
-Sensitive operational data must remain outside Git. Workflow planning in this repository must use metadata-first reasoning, minimum necessary fields, and explicit authorization boundaries before any real spreadsheet source is touched.
-
-This repository governs future implementation repositories.
-Lower layers may implement ingestion, normalization, integration, and operational workflows, but they may not redefine governance, evidence semantics, boundaries, or normative scope established here.
+This repository governs future implementation repositories. Lower layers may implement ingestion, normalization, integration, and operational workflows, but they may not redefine governance, evidence semantics, boundaries, or normative scope established here.
 Lower layers must also preserve the distinction between omission detection on existence, status, or timestamps and the prohibited copying of unnecessary personal data.
 
 ## Janus Adaptation
-
-This repository uses the adaptation review in `reports/SAD_MORON_JANUS_ADAPTATION_REVIEW_V1.md` as a conceptual source.
 
 The governance principles selectively applied here include:
 - `E+` and `E-` evidence distinction
@@ -149,6 +125,10 @@ This repository separates:
 - public governance, workflows, taxonomy, synthetic scaffolds, documentation, and audit posture
 - bounded or potentially private connectors, runtime integrations, credentials, operational deployments, institutional mappings, and production adapters
 
+### Institutional Boundary Notice
+
+This repository documents a bounded institutional pilot context and governance framework. It does not by itself claim official endorsement, publication, or representational authority from SAD Morón, the Provincia de Buenos Aires, or the Dirección General de Cultura y Educación.
+
 ## Repository Structure
 
 ```text
@@ -170,7 +150,7 @@ Structure notes:
 - `protocols/` holds conceptual operational rules, including sensitive data protection requirements
 - `reports/` holds analysis and governance review outputs
 
-At the current pilot stage, `reports/` is the active repository surface for governance reviews, audit responses, and related traceability artifacts.
+At the current pilot stage, `reports/` is the active repository surface for governance evidence, adaptation reviews, audit artifacts, and remediation tracking.
 
 Recommended SAD repository areas may also include:
 - `audit/`
@@ -180,8 +160,6 @@ Where a future dedicated `audit/` area is added, it should complement `reports/`
 
 ## Normative Status
 
-At this stage, this repository is a base scaffold.
-
 Normative intent begins in the documents that explicitly define:
 - governance core
 - scope and boundaries
@@ -190,9 +168,7 @@ Normative intent begins in the documents that explicitly define:
 - normative document registry
 - conceptual protocols
 
-Directories reserved for future growth must remain empty of executable code unless a later governance decision expands scope.
-
-Future implementation work belongs in separate lower-layer repositories, not in this framework repository.
+Directories reserved for future growth must remain empty of executable code unless a later governance decision expands scope. Future implementation work belongs in separate lower-layer repositories, not in this framework repository.
 
 ## Non-Goals
 
@@ -210,13 +186,7 @@ This repository does not:
 
 ## Reference
 
-Conceptual source:
-- [SAD Moron Janus Adaptation Review V1](./reports/SAD_MORON_JANUS_ADAPTATION_REVIEW_V1.md)
-
-Governance review chain:
-- [Claude External Governance Audit V1](./reports/CLAUDE_EXTERNAL_GOVERNANCE_AUDIT_V1.md)
-
-Governance evidence, audit artifacts, and remediation tracking are maintained in the `reports/` directory.
+Governance evidence, adaptation reviews, audit artifacts, and remediation tracking are maintained in the `reports/` directory.
 
 Canonical repository governance source:
 - `docs/repository-governance-standard.md`
