@@ -1,4 +1,5 @@
 
+
 ---
 title: "Piloto de Modernización y Gobernanza Administrativa"
 subtitle: "Infraestructura mínima de gobernanza para procesos administrativos educativos"
@@ -13,28 +14,30 @@ license: "Apache License 2.0"
 lang: "es-AR"
 ---
 
-
-# Referencia a Janus Core
-
-Janus Core constituye la capa mínima de gobernanza conceptual sobre la cual se construye la adaptación SAD-MORON. Esta referencia es exclusivamente conceptual y no implica dependencia de ningún runtime ni de ninguna tecnología específica. Véase: https://github.com/msanchezmorales-ship-it/janus-governance-core
-
-# Autoría y Trazabilidad Conceptual
-
-**Autor:** Martín Nicolás Sánchez Morales  
-**Arquitectura de Gobernanza:** Martín Nicolás Sánchez Morales  
-**Proyecto de referencia conceptual:** Janus Governance Project
-
-*Nota:*
-Las invariantes y primitivas de gobernanza utilizadas en este documento derivan conceptualmente de Janus Core y son adaptadas aquí al dominio administrativo educativo de la Secretaría de Asuntos Docentes de Morón. Este documento describe una adaptación institucional y no implica dependencia del ecosistema completo de runtimes Janus.
-
 # 1. Introducción
 
-Este documento establece los fundamentos del piloto de modernización y gobernanza administrativa impulsado desde la Secretaría de Asuntos Docentes de Morón, en el marco de la Provincia de Buenos Aires y la Dirección General de Cultura y Educación (DGCyE). Su objetivo es definir una infraestructura mínima de gobernanza para procesos administrativos educativos, priorizando la trazabilidad, interoperabilidad y transparencia documental.
+Este documento establece los fundamentos del piloto de modernización y gobernanza administrativa impulsado desde la Secretaría de Asuntos Docentes de Morón, en el marco de la Provincia de Buenos Aires y la Dirección General de Cultura y Educación (DGCyE).
+
+El piloto busca:
+- reducir la dependencia de conocimiento informal,
+- mejorar la trazabilidad administrativa,
+- facilitar la reconstrucción de procesos,
+- fortalecer la memoria institucional,
+- favorecer la interoperabilidad futura,
+- mejorar la gobernanza documental,
+- facilitar una evolución tecnológica controlada.
+
+Su objetivo es definir una infraestructura mínima de gobernanza para procesos administrativos educativos, priorizando la trazabilidad, interoperabilidad y transparencia documental.
 
 Es importante aclarar que este piloto:
 - No reemplaza sistemas oficiales.
 - No implica representación institucional oficial.
 - No constituye un sistema productivo.
+
+
+# ¿Por qué una arquitectura de gobernanza?
+
+Los procesos administrativos involucran múltiples normas, documentos, sistemas y actores. La separación de capas en la arquitectura de gobernanza busca aportar claridad, auditabilidad, trazabilidad y sostenibilidad institucional a lo largo del tiempo.
 
 # 2. Arquitectura del Ecosistema
 
@@ -86,7 +89,32 @@ Implementaciones Operativas
 - Se implementan procesos administrativos y operativos bajo dichas reglas.
 
 
-# 5. Invariantes del Núcleo de Gobernanza (Janus Core)
+
+# Fundamentos de Gobernanza
+
+Las siguientes invariantes derivan conceptualmente de Janus Core y constituyen la base de la adaptación SAD-MORON.
+# 11. Guía para Sistemas de IA
+
+- No inferir permisos no declarados.
+- No inventar autoridad institucional.
+- No colapsar capas de gobernanza y operación.
+- No exponer información sensible.
+- Clasificar incertidumbre como REVIEW o BLOCKED.
+
+# Anexo A — Fundamento Conceptual
+
+## Autoría y Trazabilidad Conceptual
+
+**Autor:** Martín Nicolás Sánchez Morales  
+**Arquitectura de Gobernanza:** Martín Nicolás Sánchez Morales  
+**Proyecto de referencia conceptual:** Janus Governance Project
+
+*Nota:*
+Las invariantes y primitivas de gobernanza utilizadas en este documento derivan conceptualmente de Janus Core y son adaptadas aquí al dominio administrativo educativo de la Secretaría de Asuntos Docentes de Morón. Este documento describe una adaptación institucional y no implica dependencia del ecosistema completo de runtimes Janus.
+
+## Referencia a Janus Core
+
+Janus Core constituye la capa mínima de gobernanza conceptual sobre la cual se construye la adaptación SAD-MORON. Esta referencia es exclusivamente conceptual y no implica dependencia de ningún runtime ni de ninguna tecnología específica. Véase: https://github.com/msanchezmorales-ship-it/janus-governance-core
 
 	extbf{KERNEL_001 — Historia Append-Only}
 - Definición: Toda modificación de registros debe realizarse únicamente mediante agregación, nunca sobrescribiendo información previa.
