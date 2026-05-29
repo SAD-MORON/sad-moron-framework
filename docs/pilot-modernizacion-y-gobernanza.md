@@ -13,6 +13,11 @@ license: "Apache License 2.0"
 lang: "es-AR"
 ---
 
+
+# Referencia a Janus Core
+
+Janus Core constituye la capa mínima de gobernanza conceptual sobre la cual se construye la adaptación SAD-MORON. Esta referencia es exclusivamente conceptual y no implica dependencia de ningún runtime ni de ninguna tecnología específica. Véase: https://github.com/msanchezmorales-ship-it/janus-governance-core
+
 # Autoría y Trazabilidad Conceptual
 
 **Autor:** Martín Nicolás Sánchez Morales  
@@ -80,6 +85,7 @@ Implementaciones Operativas
 - Se adaptan invariantes al dominio SAD-MORON.
 - Se implementan procesos administrativos y operativos bajo dichas reglas.
 
+
 # 5. Invariantes del Núcleo de Gobernanza (Janus Core)
 
 	extbf{KERNEL_001 — Historia Append-Only}
@@ -88,11 +94,22 @@ Implementaciones Operativas
 - Relevancia sociotécnica: Permite reconstrucción confiable de procesos y evita pérdida de contexto institucional.
 - Impacto: Trazabilidad institucional robusta y prevención de manipulación retroactiva.
 
+
 	extbf{KERNEL_002 — Modelo de Evidencia (E+ / E−)}
 - Definición: Toda afirmación administrativa debe estar respaldada por evidencia positiva (E+) o negativa (E−) documentada.
 - Propósito: Fortalecer la transparencia y la verificabilidad de las acciones.
 - Relevancia sociotécnica: Reduce ambigüedad y arbitrariedad en la toma de decisiones.
 - Impacto: Mejora la calidad y confiabilidad de la información institucional.
+
+## Evidencia Negativa (E−)
+
+La evidencia negativa (E−) no representa cualquier ausencia observada. Una omisión solamente puede evaluarse como evidencia negativa cuando existe:
+- una expectativa previamente definida,
+- una fuente declarada,
+- un alcance temporal explícito,
+- y un marco normativo u operativo aplicable.
+
+La infraestructura no genera interpretaciones arbitrarias sobre omisiones.
 
 	extbf{KERNEL_003 — Límite de Autoridad Humana}
 - Definición: Ningún sistema puede ejecutar acciones irreversibles sin validación explícita de una autoridad humana designada.
@@ -106,7 +123,50 @@ Implementaciones Operativas
 - Relevancia sociotécnica: Permite aprendizaje organizacional y mejora continua.
 - Impacto: Transparencia y capacidad de revisión institucional.
 
-# 6. Invariantes de Adaptación SAD-MORON
+
+# Marco Normativo y Principio de Interpretación
+
+La interpretación de omisiones y de evidencia negativa debe realizarse conforme al marco normativo aplicable, incluyendo:
+- Estatuto del Docente de la Provincia de Buenos Aires
+- acuerdos paritarios
+- resoluciones vigentes
+- normativa complementaria
+- procedimientos administrativos aplicables
+
+El marco normativo completo será incorporado progresivamente mediante los mecanismos de gobernanza definidos por el framework.
+
+# Niveles de interpretación de omisiones
+
+	extbf{Nivel 1 — Omisión de Infraestructura}
+
+La infraestructura detecta que un evento esperado no aparece dentro de un alcance definido. Ejemplos:
+- registro esperado ausente
+- validación esperada ausente
+- aceptación esperada ausente
+- actualización esperada ausente
+
+La infraestructura detecta. No interpreta responsabilidad.
+
+	extbf{Nivel 2 — Interpretación Administrativa}
+
+La determinación de relevancia administrativa, procedimental o jurídica corresponde:
+- al marco normativo
+- a la autoridad competente
+- a la revisión humana
+
+La infraestructura no determina incumplimientos ni asigna responsabilidades.
+
+# Principio de Autoridad Humana
+
+La detección de evidencia no sustituye la intervención de la autoridad humana cuando existen consecuencias administrativas, institucionales o jurídicas. Este principio es coherente con Janus Core y constituye una garantía fundamental del modelo de gobernanza.
+
+# Principio de Separación
+
+Infraestructura → detecta  
+Normativa → interpreta  
+Autoridad humana → decide
+
+Esta separación constituye una de las garantías fundamentales del modelo de gobernanza y asegura que la infraestructura no asuma funciones de interpretación normativa ni de decisión administrativa.
 
 	extbf{SAD_001 — Límite antes que ejecución}
 - Definición: Toda acción debe estar precedida por la definición explícita de límites.
