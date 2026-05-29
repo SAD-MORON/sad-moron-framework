@@ -1,7 +1,7 @@
 
 # SAD-MORON-FRAMEWORK
 
-	extbf{Piloto de Modernización y Gobernanza:} 
+	extbf{Piloto de Modernización y Gobernanza:}
 docs/pilot-modernizacion-y-gobernanza.md
 
 ## Purpose
