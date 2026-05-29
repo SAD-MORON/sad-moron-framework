@@ -16,6 +16,13 @@ date: "2026"
 
 license: "Apache License 2.0"
 lang: "es-AR"
+
+audience:
+	- human-institutional
+	- technical
+	- ai-agent
+document_class: governance-foundation
+review_status: internal-review
 ---
 
 
@@ -39,11 +46,33 @@ Su objetivo es definir una infraestructura mínima de gobernanza para procesos a
 **No constituye una posición institucional oficial, ni implica aprobación formal, ni reemplaza regulaciones, sistemas o procedimientos oficiales.**
 
 
+# Cómo leer este documento
+
+Este documento está dirigido a tres audiencias principales:
+
+**1. Equipos administrativos e institucionales:**
+Enfocarse en los fundamentos de gobernanza, límites, fuentes declaradas y trazabilidad para la gestión y control de procesos.
+
+**2. Equipos técnicos:**
+Priorizar la arquitectura, los modelos de invariantes, la trazabilidad conceptual y la interoperabilidad para implementación y soporte.
+
+**3. Sistemas de IA y agentes automatizados:**
+Atender a las secciones de guía para IA, principios de interpretación y restricciones operativas para asegurar coherencia y cumplimiento normativo.
+
+
+
 # ¿Por qué una arquitectura de gobernanza?
 
 Los procesos administrativos involucran múltiples normas, documentos, sistemas y actores. La separación de capas en la arquitectura de gobernanza busca aportar claridad, auditabilidad, trazabilidad y sostenibilidad institucional a lo largo del tiempo.
 
 Este piloto es de uso interno y no implica adopción institucional oficial.
+
+
+# Audiencias y Alcance
+
+El documento fue escrito principalmente para lectores humanos institucionales.
+Incluye instrucciones para sistemas de IA únicamente para preservar coherencia operativa.
+Las instrucciones para IA no sustituyen normativa ni autoridad humana.
 
 # 2. Arquitectura del Ecosistema
 
@@ -106,6 +135,21 @@ Las siguientes invariantes derivan conceptualmente de Janus Core y constituyen l
 - No colapsar capas de gobernanza y operación.
 - No exponer información sensible.
 - Clasificar incertidumbre como REVIEW o BLOCKED.
+
+## Principio de Interpretación Restringida
+
+Un sistema de IA no debe:
+- inferir autoridad
+- inferir permisos
+- inferir omisiones sin eventos esperados
+- inferir conclusiones legales
+- inferir responsabilidad
+
+Tales determinaciones requieren:
+- alcance declarado
+- fuente declarada
+- marco normativo aplicable
+- revisión humana
 
 # Anexo A — Fundamento Conceptual
 
@@ -272,6 +316,17 @@ Cada proceso se estructura para garantizar límites claros, fuentes declaradas, 
 La modernización no es solo software. Involucra memoria institucional, procedimientos, normativas, personas y herramientas. La deriva organizacional, la dependencia de operadores y la pérdida de contexto institucional son riesgos mitigados mediante documentación clara y procesos auditables.
 
 Este documento es de uso interno y no implica adopción institucional oficial.
+
+
+# Metadatos de Gobernanza
+
+- Documento: Piloto de Modernización y Gobernanza Administrativa
+- Clase documental: Governance Foundation
+- Estado: Piloto interno
+- Audiencia: institucional, técnica e IA
+- Fuente canónica: SAD-MORON-FRAMEWORK
+- Revisión: interna
+- Licencia: Apache 2.0
 
 # 9. Seguridad y Protección de Datos
 
