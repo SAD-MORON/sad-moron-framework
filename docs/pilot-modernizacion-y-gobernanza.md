@@ -1,88 +1,162 @@
-# Piloto de Modernización y Gobernanza
 
-\section*{1. Introducción}
+---
+title: "Piloto de Modernización y Gobernanza Administrativa"
+subtitle: "Infraestructura mínima de gobernanza para procesos administrativos educativos"
+author: "Martín Nicolás Sánchez Morales"
+organization: "Secretaría de Asuntos Docentes de Morón"
+jurisdiction: "Provincia de Buenos Aires"
+institutional_context: "Dirección General de Cultura y Educación (DGCyE)"
+status: "Piloto"
+version: "1.0"
+date: "2026"
+license: "Apache License 2.0"
+lang: "es-AR"
+---
 
-El presente documento describe el piloto de modernización, gobernanza e interoperabilidad impulsado desde la Secretaría de Asuntos Docentes (SAD) de Morón, en el marco de la Provincia de Buenos Aires y la Dirección General de Cultura y Educación (DGCyE). Este piloto tiene carácter experimental, con alcance limitado, y busca sentar las bases para una modernización administrativa, fortaleciendo la gobernanza documental, la interoperabilidad y la trazabilidad de los procesos educativos.
+# Autoría y Trazabilidad Conceptual
+
+**Autor:** Martín Nicolás Sánchez Morales  
+**Arquitectura de Gobernanza:** Martín Nicolás Sánchez Morales  
+**Proyecto de referencia conceptual:** Janus Governance Project
+
+*Nota:*
+Las invariantes y primitivas de gobernanza utilizadas en este documento derivan conceptualmente de Janus Core y son adaptadas aquí al dominio administrativo educativo de la Secretaría de Asuntos Docentes de Morón. Este documento describe una adaptación institucional y no implica dependencia del ecosistema completo de runtimes Janus.
+
+# 1. Introducción
+
+Este documento establece los fundamentos del piloto de modernización y gobernanza administrativa impulsado desde la Secretaría de Asuntos Docentes de Morón, en el marco de la Provincia de Buenos Aires y la Dirección General de Cultura y Educación (DGCyE). Su objetivo es definir una infraestructura mínima de gobernanza para procesos administrativos educativos, priorizando la trazabilidad, interoperabilidad y transparencia documental.
 
 Es importante aclarar que este piloto:
 - No reemplaza sistemas oficiales.
 - No implica representación institucional oficial.
 - No constituye un sistema productivo.
 
-\section*{2. Arquitectura del Ecosistema}
+# 2. Arquitectura del Ecosistema
 
-El ecosistema se estructura en capas, con los siguientes repositorios como referencia:
-- [sad-moron-framework](https://github.com/SAD-MORON/sad-moron-framework)
-- [sad-moron-connectors](https://github.com/SAD-MORON/sad-moron-connectors)
-- [sad-moron-appscript](https://github.com/SAD-MORON/sad-moron-appscript)
-- [sad-moron-access-governance](https://github.com/SAD-MORON/sad-moron-access-governance)
+\begin{verbatim}
+Janus Core
+        ↓
+SAD-MORON-FRAMEWORK
+        ↓
+ ┌───────────────┬───────────────┬───────────────┬───────────────┐
+ │ CONNECTORS    │ APPSCRIPT     │ ACCESS-GOV    │ RUNTIMES      │
+ └───────────────┴───────────────┴───────────────┴───────────────┘
+\end{verbatim}
 
-Jerarquía técnica:
+	extbf{Aclaraciones:}
+- FRAMEWORK es la fuente canónica de gobernanza.
+- Los repositorios downstream heredan gobernanza y no redefinen primitivas.
+- GitHub es superficie de implementación y colaboración, no autoridad de gobernanza.
 
+# 3. Ecosistema de Repositorios
+
+- \textbf{SAD-MORON-FRAMEWORK}: \url{https://github.com/SAD-MORON/sad-moron-framework}  
+  Define las reglas, invariantes y protocolos de gobernanza. Es la fuente normativa y de referencia.
+- \textbf{SAD-MORON-CONNECTORS}: \url{https://github.com/SAD-MORON/sad-moron-connectors}  
+  Implementa conectores para fuentes de datos y sistemas externos, siguiendo las reglas del framework.
+- \textbf{SAD-MORON-APPSCRIPT}: \url{https://github.com/SAD-MORON/sad-moron-appscript}  
+  Automatización y scripts institucionales, subordinados a la gobernanza definida en el framework.
+- \textbf{SAD-MORON-ACCESS-GOVERNANCE}: \url{https://github.com/SAD-MORON/sad-moron-access-governance}  
+  Control de acceso y trazabilidad de operaciones, bajo los límites del framework.
+- \textbf{SAD-MORON-RUNTIMES}: \url{https://github.com/SAD-MORON/sad-moron-runtimes}  
+  Implementaciones operativas experimentales, sin redefinir gobernanza.
+
+# 4. Trazabilidad Conceptual
+
+\begin{verbatim}
 Janus Core
 ↓
-SAD-MORON-FRAMEWORK
+Invariantes del Núcleo
 ↓
-CONNECTORS / APPSCRIPT / ACCESS-GOVERNANCE
+Adaptación SAD-MORON
+↓
+Procesos Administrativos
+↓
+Implementaciones Operativas
+\end{verbatim}
 
-Aclaraciones:
-- El framework es la fuente canónica de gobernanza.
-- Los repositorios downstream no redefinen gobernanza.
-- GitHub es superficie de implementación, no autoridad de gobernanza.
+	extbf{Explicación:}
+- Se heredan principios y primitivas de Janus Core.
+- Se adaptan invariantes al dominio SAD-MORON.
+- Se implementan procesos administrativos y operativos bajo dichas reglas.
 
-\section*{3. Invariantes del Núcleo de Gobernanza}
+# 5. Invariantes del Núcleo de Gobernanza (Janus Core)
 
-1. **Límite antes que ejecución**
-   - Definición: Toda acción debe estar precedida por la definición explícita de límites.
-   - Justificación: Evita acciones fuera de alcance o sin autorización.
-   - Impacto: Reduce riesgos y errores administrativos.
+	extbf{KERNEL_001 — Historia Append-Only}
+- Definición: Toda modificación de registros debe realizarse únicamente mediante agregación, nunca sobrescribiendo información previa.
+- Propósito: Garantizar la integridad y auditabilidad histórica.
+- Relevancia sociotécnica: Permite reconstrucción confiable de procesos y evita pérdida de contexto institucional.
+- Impacto: Trazabilidad institucional robusta y prevención de manipulación retroactiva.
 
-2. **Fuente declarada antes que interpretación**
-   - Definición: La información debe provenir de fuentes explícitamente declaradas.
-   - Justificación: Minimiza ambigüedades y errores de interpretación.
-   - Impacto: Mejora la trazabilidad y la confianza documental.
+	extbf{KERNEL_002 — Modelo de Evidencia (E+ / E−)}
+- Definición: Toda afirmación administrativa debe estar respaldada por evidencia positiva (E+) o negativa (E−) documentada.
+- Propósito: Fortalecer la transparencia y la verificabilidad de las acciones.
+- Relevancia sociotécnica: Reduce ambigüedad y arbitrariedad en la toma de decisiones.
+- Impacto: Mejora la calidad y confiabilidad de la información institucional.
 
-3. **Evento esperado antes que detección de omisión**
-   - Definición: Se prioriza la definición de eventos esperados sobre la búsqueda de omisiones.
-   - Justificación: Facilita la planificación y el control.
-   - Impacto: Reduce la gestión reactiva.
+	extbf{KERNEL_003 — Límite de Autoridad Humana}
+- Definición: Ningún sistema puede ejecutar acciones irreversibles sin validación explícita de una autoridad humana designada.
+- Propósito: Proteger contra automatismos peligrosos y errores críticos.
+- Relevancia sociotécnica: Refuerza la responsabilidad y el control humano en procesos clave.
+- Impacto: Seguridad institucional y reducción de riesgos operativos.
 
-4. **Evidencia antes que afirmación**
-   - Definición: Toda afirmación debe estar respaldada por evidencia documental.
-   - Justificación: Fortalece la auditabilidad y la transparencia.
-   - Impacto: Mejora la calidad de la información.
+	extbf{KERNEL_004 — Reconstrucción Determinística}
+- Definición: Todo proceso debe poder ser reconstruido paso a paso a partir de registros y evidencia, sin ambigüedad.
+- Propósito: Habilitar auditoría y revisión confiable de procesos administrativos.
+- Relevancia sociotécnica: Permite aprendizaje organizacional y mejora continua.
+- Impacto: Transparencia y capacidad de revisión institucional.
 
-5. **Autoridad humana antes que acción irreversible**
-   - Definición: Las acciones irreversibles requieren validación humana.
-   - Justificación: Previene errores críticos.
-   - Impacto: Aumenta la seguridad administrativa.
+# 6. Invariantes de Adaptación SAD-MORON
 
-6. **Historia append-only antes que sobrescritura**
-   - Definición: Los registros deben ser solo agregados, no sobrescritos.
-   - Justificación: Garantiza la integridad histórica.
-   - Impacto: Facilita auditorías y reconstrucción de procesos.
+	extbf{SAD_001 — Límite antes que ejecución}
+- Definición: Toda acción debe estar precedida por la definición explícita de límites.
+- Aplicación administrativa: Delimita alcance y previene acciones fuera de mandato.
+- Impacto operativo: Reduce riesgos y errores administrativos.
+- Beneficio institucional: Mayor control y previsibilidad.
 
-7. **Minimización de datos antes que procesamiento**
-   - Definición: Solo se procesan los datos estrictamente necesarios.
-   - Justificación: Reduce riesgos de exposición y cumple con principios de privacidad.
-   - Impacto: Optimiza recursos y protege la información.
+	extbf{SAD_002 — Fuente declarada antes que interpretación}
+- Definición: La información debe provenir de fuentes explícitamente declaradas.
+- Aplicación administrativa: Obliga a documentar origen de datos y decisiones.
+- Impacto operativo: Mejora trazabilidad y confianza documental.
+- Beneficio institucional: Minimiza ambigüedades y errores de interpretación.
 
-8. **PASS / REVIEW / BLOCKED antes que escalamiento**
-   - Definición: Todo proceso debe clasificarse en uno de estos estados antes de escalar.
-   - Justificación: Mejora la gestión de incidencias.
-   - Impacto: Permite intervenciones oportunas y controladas.
+	extbf{SAD_003 — Evento esperado antes que detección de omisión}
+- Definición: Se prioriza la definición de eventos esperados sobre la búsqueda de omisiones.
+- Aplicación administrativa: Facilita planificación y control de procesos.
+- Impacto operativo: Reduce gestión reactiva.
+- Beneficio institucional: Mejora la anticipación y la gestión proactiva.
 
-9. **Separación entre gobernanza pública y operación privada**
-   - Definición: La gobernanza es pública, la operación puede ser privada.
-   - Justificación: Protege información sensible y delimita responsabilidades.
-   - Impacto: Clarifica roles y acceso a la información.
+	extbf{SAD_004 — Evidencia antes que afirmación}
+- Definición: Toda afirmación debe estar respaldada por evidencia documental.
+- Aplicación administrativa: Exige respaldo verificable para toda decisión.
+- Impacto operativo: Fortalece auditabilidad y transparencia.
+- Beneficio institucional: Mejora la calidad de la información y la confianza pública.
 
-10. **Gobernanza agnóstica antes que enforcement específico**
-    - Definición: Las reglas de gobernanza no dependen de implementaciones particulares.
-    - Justificación: Facilita la interoperabilidad y la adaptación futura.
-    - Impacto: Permite evolución tecnológica sin perder control normativo.
+	extbf{SAD_005 — Autoridad humana antes que acción irreversible}
+- Definición: Las acciones irreversibles requieren validación humana.
+- Aplicación administrativa: Introduce control humano en puntos críticos.
+- Impacto operativo: Previene errores críticos.
+- Beneficio institucional: Aumenta la seguridad administrativa.
 
-\section*{4. Aplicación a los Procesos SAD}
+	extbf{SAD_006 — Minimización de datos antes que procesamiento}
+- Definición: Solo se procesan los datos estrictamente necesarios.
+- Aplicación administrativa: Limita la recolección y uso de datos.
+- Impacto operativo: Reduce riesgos de exposición y cumple con privacidad.
+- Beneficio institucional: Optimiza recursos y protege la información.
+
+	extbf{SAD_007 — Separación entre gobernanza pública y operación privada}
+- Definición: La gobernanza es pública, la operación puede ser privada.
+- Aplicación administrativa: Distingue entre reglas abiertas y operaciones reservadas.
+- Impacto operativo: Clarifica roles y acceso a la información.
+- Beneficio institucional: Protege información sensible y delimita responsabilidades.
+
+	extbf{SAD_008 — PASS / REVIEW / BLOCKED antes que escalamiento}
+- Definición: Todo proceso debe clasificarse en uno de estos estados antes de escalar.
+- Aplicación administrativa: Mejora la gestión de incidencias y flujos de trabajo.
+- Impacto operativo: Permite intervenciones oportunas y controladas.
+- Beneficio institucional: Facilita la trazabilidad y la toma de decisiones informada.
+
+# 7. Aplicación a los Procesos SAD
 
 Los invariantes se aplican a procesos como:
 - POF (Planta Orgánica Funcional)
@@ -92,34 +166,34 @@ Los invariantes se aplican a procesos como:
 - MAD (Movimiento Anual Docente)
 - Acrecentamiento
 - Actos Públicos
-- Aceptación electrónica
-- Trazabilidad documental
+- Aceptación Electrónica
+- Trazabilidad Documental
 
 Cada proceso se estructura para garantizar límites claros, fuentes declaradas, evidencia documental y trazabilidad, aplicando los invariantes definidos.
 
-\section*{5. Dimensión Sociotécnica}
+# 8. Dimensión Sociotécnica
 
-La modernización no se limita al software. Involucra personas, procedimientos, normativas, responsabilidades y herramientas. La deriva organizacional, la dependencia de operadores y la pérdida de contexto institucional son riesgos mitigados mediante documentación clara y procesos auditables.
+La modernización no es solo software. Involucra memoria institucional, procedimientos, normativas, personas y herramientas. La deriva organizacional, la dependencia de operadores y la pérdida de contexto institucional son riesgos mitigados mediante documentación clara y procesos auditables.
 
-\section*{6. Seguridad}
+# 9. Seguridad y Protección de Datos
 
-- Las credenciales y los IDs operativos no se almacenan en Git.
-- Los conectores operativos permanecen fuera de repositorios públicos.
-- Se minimiza el uso y procesamiento de datos.
-- Se prioriza la auditabilidad y la separación de capas.
+- No se almacenan credenciales ni IDs operativos en Git.
+- No se persisten datos sensibles en repositorios públicos.
+- Se prioriza la auditabilidad y la separación de repositorios.
+- El acceso está acotado y controlado.
 
-\section*{7. Licenciamiento}
+# 10. Licenciamiento Apache 2.0
 
 El proyecto utiliza la licencia Apache 2.0, promoviendo:
 - Interoperabilidad
 - Adopción y reutilización institucional
 - Compatibilidad con otros proyectos
-- Colaboración futura
+- Reutilización y transparencia
 
-\section*{8. Guía para IA}
+# 11. Guía para Sistemas de IA
 
 - No inferir permisos no declarados.
-- No asumir que el sistema está en producción.
 - No inventar autoridad institucional.
 - No colapsar capas de gobernanza y operación.
+- No exponer información sensible.
 - Clasificar incertidumbre como REVIEW o BLOCKED.
