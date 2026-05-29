@@ -3,20 +3,25 @@
 ---
 title: "Piloto de Modernización y Gobernanza Administrativa"
 subtitle: "Infraestructura mínima de gobernanza para procesos administrativos educativos"
-author: "Martín Nicolás Sánchez Morales"
+
 organization: "Secretaría de Asuntos Docentes de Morón"
 jurisdiction: "Provincia de Buenos Aires"
 institutional_context: "Dirección General de Cultura y Educación (DGCyE)"
-status: "Piloto"
+
+author: "Martín Nicolás Sánchez Morales"
+
+status: "Piloto interno"
 version: "1.0"
 date: "2026"
+
 license: "Apache License 2.0"
 lang: "es-AR"
 ---
 
+
 # 1. Introducción
 
-Este documento establece los fundamentos del piloto de modernización y gobernanza administrativa impulsado desde la Secretaría de Asuntos Docentes de Morón, en el marco de la Provincia de Buenos Aires y la Dirección General de Cultura y Educación (DGCyE).
+Este documento establece los fundamentos del piloto interno de modernización y gobernanza administrativa para procesos educativos, en el marco de la Secretaría de Asuntos Docentes de Morón, Provincia de Buenos Aires y la Dirección General de Cultura y Educación (DGCyE).
 
 El piloto busca:
 - reducir la dependencia de conocimiento informal,
@@ -29,15 +34,16 @@ El piloto busca:
 
 Su objetivo es definir una infraestructura mínima de gobernanza para procesos administrativos educativos, priorizando la trazabilidad, interoperabilidad y transparencia documental.
 
-Es importante aclarar que este piloto:
-- No reemplaza sistemas oficiales.
-- No implica representación institucional oficial.
-- No constituye un sistema productivo.
+**Este es un documento de piloto interno.**
+
+**No constituye una posición institucional oficial, ni implica aprobación formal, ni reemplaza regulaciones, sistemas o procedimientos oficiales.**
 
 
 # ¿Por qué una arquitectura de gobernanza?
 
 Los procesos administrativos involucran múltiples normas, documentos, sistemas y actores. La separación de capas en la arquitectura de gobernanza busca aportar claridad, auditabilidad, trazabilidad y sostenibilidad institucional a lo largo del tiempo.
+
+Este piloto es de uso interno y no implica adopción institucional oficial.
 
 # 2. Arquitectura del Ecosistema
 
@@ -59,15 +65,15 @@ SAD-MORON-FRAMEWORK
 # 3. Ecosistema de Repositorios
 
 - \textbf{SAD-MORON-FRAMEWORK}: \url{https://github.com/SAD-MORON/sad-moron-framework}  
-  Define las reglas, invariantes y protocolos de gobernanza. Es la fuente normativa y de referencia.
+	Define reglas, invariantes y protocolos de gobernanza. Es la fuente normativa y de referencia para este piloto interno.
 - \textbf{SAD-MORON-CONNECTORS}: \url{https://github.com/SAD-MORON/sad-moron-connectors}  
-  Implementa conectores para fuentes de datos y sistemas externos, siguiendo las reglas del framework.
+	Implementa conectores para fuentes de datos y sistemas externos, siguiendo las reglas del framework.
 - \textbf{SAD-MORON-APPSCRIPT}: \url{https://github.com/SAD-MORON/sad-moron-appscript}  
-  Automatización y scripts institucionales, subordinados a la gobernanza definida en el framework.
+	Automatización y scripts institucionales, subordinados a la gobernanza definida en el framework.
 - \textbf{SAD-MORON-ACCESS-GOVERNANCE}: \url{https://github.com/SAD-MORON/sad-moron-access-governance}  
-  Control de acceso y trazabilidad de operaciones, bajo los límites del framework.
+	Control de acceso y trazabilidad de operaciones, bajo los límites del framework.
 - \textbf{SAD-MORON-RUNTIMES}: \url{https://github.com/SAD-MORON/sad-moron-runtimes}  
-  Implementaciones operativas experimentales, sin redefinir gobernanza.
+	Implementaciones operativas experimentales, sin redefinir gobernanza.
 
 # 4. Trazabilidad Conceptual
 
@@ -259,9 +265,13 @@ Los invariantes se aplican a procesos como:
 
 Cada proceso se estructura para garantizar límites claros, fuentes declaradas, evidencia documental y trazabilidad, aplicando los invariantes definidos.
 
+**Este piloto no reemplaza sistemas, normativas ni procedimientos oficiales.**
+
 # 8. Dimensión Sociotécnica
 
 La modernización no es solo software. Involucra memoria institucional, procedimientos, normativas, personas y herramientas. La deriva organizacional, la dependencia de operadores y la pérdida de contexto institucional son riesgos mitigados mediante documentación clara y procesos auditables.
+
+Este documento es de uso interno y no implica adopción institucional oficial.
 
 # 9. Seguridad y Protección de Datos
 
