@@ -15,9 +15,14 @@ Purpose:
 - boundaries
 - normative scope
 - evidence rules
+- surface governance as pre-operational gate
 - infrastructure growth limits
 
 This layer defines the meaning of governance objects and the rules lower layers must follow.
+
+Surface governance belongs to Layer 1 as a transversal pre-operational gate that constrains lower layers before execution or deployment.
+
+This requirement does not create a new layer.
 
 This layer does not execute, ingest, normalize, or automate.
 
@@ -80,6 +85,12 @@ Implementation concerns belong in future implementation repositories, not in `sa
 ### Rule 4: Audit independence
 
 Audit and reconstruction should remain conceptually separate from implementation so that later review is not controlled by the same layer that performs ingestion or normalization.
+
+### Rule 5: Surface validation before operation
+
+Layer 2 and Layer 3 activities must validate declared surfaces and their contract assumptions before operation.
+
+This gate is governed by Layer 1 and does not imply a separate architectural layer.
 
 ## Pipeline / Planner Interpretation
 

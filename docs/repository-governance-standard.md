@@ -167,13 +167,25 @@ Required security posture concepts include:
 - no credential persistence
 - no hidden authority
 - audit-before-execution
+- surface-validation-before-operation
 - append-only evidence when applicable
 
 Interpretation:
 - no credential persistence means credentials, tokens, secrets, or session artifacts must not be committed to repository history
 - no hidden authority means repositories must not rely on unstated authority, undeclared sources, or implicit approval chains
 - audit-before-execution means governance-sensitive execution should not expand before boundary, evidence, and review posture are documented
+- surface-validation-before-operation means any operational repository must validate declared surfaces before execution or deployment
 - append-only evidence when applicable means review evidence and governance reasoning should preserve traceability rather than silently erase prior context
+
+Minimum governed sequence for surface validation:
+
+PRECHECK
+↓
+PREPARE
+↓
+VERIFY
+↓
+OPERATE
 
 ## Repository README Standard
 

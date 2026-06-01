@@ -17,12 +17,33 @@ Where another framework document appears to conflict with this document, this do
 `SAD-MORON-FRAMEWORK` exists to define:
 - normative governance boundaries
 - declared-source discipline
+- declared-surface validation discipline
 - expected-event discipline
 - temporal review constraints
 - evidence meaning
 - omission review limits
 - repository separation across future layers
 - infrastructure growth limits
+
+## SAD_009 Surface-First Principle
+
+The framework adopts SAD_009 as a core governance principle:
+
+Superficies declaradas antes que operacion.
+
+No process should assume that a surface satisfies a contract without bounded validation under declared governance scope.
+
+Required governed sequence:
+
+PRECHECK
+↓
+PREPARE
+↓
+VERIFY
+↓
+OPERATE
+
+This sequence is a governance gate, not a runtime implementation instruction.
 
 ## Normative Boundary
 
