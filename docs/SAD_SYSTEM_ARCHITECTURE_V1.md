@@ -7,6 +7,7 @@
 - version: V1
 - scope: governance infrastructure and repository roles within SAD-MORON ecosystem
 - evidence basis: demonstrated repository posture + ratified human decisions from this alignment initiative
+- publication state: LOCAL_ONLY — the architecture draft and supporting alignment commits have not yet been promoted or pushed to their governed origin branches
 - ratification: awaiting institutional review
 
 ---
@@ -222,7 +223,7 @@ Runtime Governance establishes the contracts, boundaries, technical identity, ex
 
 **Current status:** RATIFIED DECISION / LOCAL_ONLY — definition established in Step 1 alignment, awaiting external ratification
 
-**Evidence:** Documented in SAD-MORON-FRAMEWORK `docs/runtime-scope.md` and cross-referenced governance documents
+**Evidence:** Documented in SAD-MORON-RUNTIMES `docs/runtime-scope.md` and cross-referenced governance documents
 
 ---
 
@@ -638,15 +639,15 @@ Pilot Artifact (in Labs or private context)
 
 | Architectural Element | Current Status | Evidence Class | Notes |
 |---|---|---|---|
-| Governance infrastructure separation | DEMONSTRATED | RATIFIED_DECISION + evidence from Step 3 alignment | documented in Framework, Connectors, AppScript, Access Governance |
-| Runtime Governance definition | DEMONSTRATED | RATIFIED_DECISION from Step 1 alignment | published in Framework documentation |
-| Labs private pilot role | DEMONSTRATED | RATIFIED_DECISION from Step 2 alignment | private repository, ratified human decision |
+| Governance infrastructure separation | RATIFIED_HUMAN_DECISION / LOCAL_ONLY | evidence from Step 3 alignment | documented in Framework, Connectors, AppScript, Access Governance; commit c264afc; not published |
+| Runtime Governance definition | RATIFIED_HUMAN_DECISION / LOCAL_ONLY | evidence from Step 1 alignment | documented in SAD-MORON-RUNTIMES; commit 49b0956; not published |
+| Labs private pilot role | RATIFIED_HUMAN_DECISION / LOCAL_ONLY | evidence from Step 2 alignment | private repository (DEMONSTRATED), role decision in commit 4adc013; not published |
 | Framework governance anchor | DEMONSTRATED | observed repository posture | public repository, governance-first |
 | AppScript governance patterns | DEMONSTRATED | observed repository posture | private repository, reference implementations with audit boundaries |
 | Connectors contract layer | DEMONSTRATED | observed repository posture | private repository, contract definitions and compliance packs |
 | Access Governance layer | DEMONSTRATED | observed repository posture | private repository, identity and access governance |
 | 5650 pilot system | PARTIALLY_DEMONSTRATED | code and workflows in Labs | pilot character maintained, no production claim |
-| Art.109 bounded context | DEMONSTRATED | separate administrative processes | intentionally separate from 5650, no integration contract |
+| Art.109 bounded context | DEMONSTRATED_LOCAL_ONLY | separate administrative processes | local unpublished branch; intentionally separate from 5650, no integration contract; not on origin/main |
 | Institutional source acquisition | RATIFIED_DECISION | governance framework defined | implementation FUTURE |
 | Data normalization pipeline | NOT_DEMONSTRATED | planning pattern documented | implementation awaiting resource allocation |
 | Operational runtime layer | NOT_DEMONSTRATED | none | destination and architecture FUTURE |
@@ -794,9 +795,9 @@ SEPARATE FROM GOVERNANCE: PRIVATE PILOT LABORATORY
 | Repository | Architectural Role | Executes Domain Logic? | Contains Operational Secrets? | Status |
 |---|---|---|---|---|
 | **SAD-MORON-FRAMEWORK** | Canonical governance anchor, principles, scope, inheritance, governance standards | NO | NO | Public, fully documented |
-| **SAD-MORON-ACCESS-GOVERNANCE** | Identity governance, roles, permissions, authority, electronic acceptance contracts | NO | NO | Private/restricted, fully documented |
-| **SAD-MORON-CONNECTORS** | Connector contracts, source boundaries, integration compliance, evidence expectations | NO | NO | Private/restricted, fully documented |
-| **SAD-MORON-APPSCRIPT** | Apps Script governance patterns, implementation scaffolding, audit boundaries | REFERENCE PATTERNS ONLY | NO | Private, fully documented with audit boundaries |
+| **SAD-MORON-ACCESS-GOVERNANCE** | Public governance infrastructure: identity governance, roles, permissions, authority, electronic acceptance contracts | NO | NO | Public governance infrastructure, fully documented |
+| **SAD-MORON-CONNECTORS** | Public governance infrastructure: connector contracts, source boundaries, integration compliance, evidence expectations | NO | NO | Public governance infrastructure, fully documented |
+| **SAD-MORON-APPSCRIPT** | Public governance infrastructure: Apps Script governance patterns, implementation scaffolding, audit boundaries | REFERENCE PATTERNS ONLY | NO | Public governance infrastructure, fully documented with audit boundaries |
 | **SAD-MORON-RUNTIMES** | Runtime execution governance contracts, technical identity, evidence requirements | NO (GOVERNANCE ONLY) | NO | Governance defined, implementation future |
 
 ### PILOT LABORATORY
