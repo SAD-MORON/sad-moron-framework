@@ -394,7 +394,7 @@ Gate_Impact:                       [impact on prepublication gate: PASS / CONDIT
 Audit_ID:                          AUD-2026-08-05-SAP-001
 Artifact:                          SAD_AUDIT_SURFACES_AND_PROMOTION_GATES_V1.md
 Artifact_Ref:                      cdecbbac658d3cc4c66a04dcd3f3d816a8216b4f
-Claim_ID:                          PROTOCOL-STATUS-CLARITY
+Claim_ID:                          SAD_AUDIT_SURFACES_AND_PROMOTION_GATES_V1::STATUS::CLARITY
 Claim:                             Protocol status terminology is clear and unambiguous
 Claim_Surface_ID:                  S5 (public candidate) + S2 (artifact review)
 Declared_Audit_Surface_ID:         S5
@@ -452,8 +452,8 @@ An audit must preserve evidence provenance by recording both the declared scope 
 
 Required scope provenance fields:
 
-- `Declared_Surface_ID`
-- `Actual_Surface_ID`
+- `Declared_Audit_Surface_ID`
+- `Actual_Audit_Surface_ID`
 
 ## SECTION 5A — CLAIM_ID GOVERNANCE CONVENTION (R5)
 
@@ -479,10 +479,10 @@ Use a **namespaced pattern** suitable for your context:
 
 **Examples:**
 
-- `SAD_AUDIT_SURFACES_AND_PROMOTION_GATES_V1.md::PROTOCOL-STATUS-CLARITY`
-- `Architecture_V1.md::RATIFICATION-STATUS-CONSISTENCY`
-- `Governance_Core.md::SAD_009_RELATIONSHIP_CLARITY`
-- `Repository.md::LINK-RESOLUTION`
+- `SAD_AUDIT_SURFACES_AND_PROMOTION_GATES_V1::STATUS::CLARITY`
+- `Architecture_V1::STATUS::RATIFICATION_CONSISTENCY`
+- `Governance_Core::PRINCIPLE::SAD_009_RELATIONSHIP`
+- `Repository::NAVIGATION::LINK_RESOLUTION`
 
 ### Pattern Explanation
 
@@ -1019,6 +1019,14 @@ Sensitive findings:
 ---
 
 ## SECTION 18 — OBSERVED_EVIDENCE_BASIS
+
+### Governed Evidence Record
+
+This section is grounded in the detailed evidence record:
+
+→ [SAD_AUDIT_SURFACES_PROTOCOL_V1_EVIDENCE_BASIS_2026-08-05.md](../reports/SAD_AUDIT_SURFACES_PROTOCOL_V1_EVIDENCE_BASIS_2026-08-05.md)
+
+That document preserves the observed gaps, governance learning, and candidate publication history that motivated this protocol's formulation.
 
 ### Motivation
 
