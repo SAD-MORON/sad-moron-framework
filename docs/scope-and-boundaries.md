@@ -24,6 +24,42 @@ The repository does not currently govern:
 - automation runtimes
 - AI agent execution
 
+## Governance Infrastructure vs. Operational Infrastructure
+
+SAD-MORON separates **governance infrastructure** from **operational and data infrastructure**.
+
+**Governance infrastructure** comprises reusable and auditable contracts, principles, boundaries, schemas, protocols, authority conditions and evidence requirements. This layer defines the conditions under which systems and processes may be considered governed.
+
+Examples of governance infrastructure scope:
+- governance principles and primitives
+- authority and access contracts
+- connector contracts
+- runtime governance rules
+- implementation governance rules
+- reusable schemas and data models
+- communication protocols
+- taxonomies and vocabularies
+- evidence and audit requirements
+- synthetic examples for guidance
+- architectural constraints
+
+Governance infrastructure **may be publicly auditable** when its information classification permits it. This is a decision independent of the governance layer itself. However, any publicly accessible governance artifacts must not expose information that permits unauthorized reconstruction, access or compromise of operational infrastructure or institutional data.
+
+**Operational and data infrastructure** contains the concrete deployments, institutional configurations, real mappings, sensitive integrations, source identifiers, operational data and other restricted implementation material required to operate specific systems under declared governance.
+
+Examples of operational infrastructure scope:
+- production deployments and runtimes
+- real institutional source mappings
+- real source identifiers and endpoints
+- configuration for specific environments
+- real institutional snapshots
+- administrative and personal data
+- sensitive integrations and adapters
+
+Operational infrastructure requires access controls bounded by institutional authorization and information sensitivity. Secrets and credentials must remain outside version control regardless of repository classification.
+
+**Promotion does not imply publication.** Promotion of a governance or operational artifact means its incorporation into a governed destination. The access classification and public auditability of that destination are independent decisions from the promotion decision itself.
+
 ## Boundary Conditions
 
 Any governance analysis in this repository must declare:
