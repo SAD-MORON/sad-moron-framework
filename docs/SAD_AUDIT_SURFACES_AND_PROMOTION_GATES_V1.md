@@ -291,6 +291,8 @@ Artifact:                          [what is being audited]
 Artifact_Ref / SHA:                [version/commit/reference]
 Claim_ID:                          [standardized claim type]
 Claim:                             [specific assertion]
+Declared_Surface_ID:               [surface(s) authorized for this audit]
+Actual_Surface_ID:                  [surface(s) actually used]
 Surface_ID:                        [S1/S2/S3/S4/S5/S6/S7/S8]
 Auditor_Role:                      [role, not vendor]
 Evidence_Type:                     [documentary/technical/observational/etc]
@@ -308,6 +310,11 @@ Divergence:                        [notes on conflicts with other audits]
 - `NO_DEMOSTRADO` — Cannot determine (evidence insufficient, surface inaccessible, scope unclear)
 - `CONTRADICTORY` — Different audit found opposite result
 - `STALE` — Evidence was valid at timestamp but may be invalidated by subsequent change
+- `AUDIT_SCOPE_COMPLIANT` — Evidence stayed within the declared audit scope
+- `AUDIT_SCOPE_BREACH` — Audit used undeclared evidence surface, source, or permission context
+- `OUT_OF_SCOPE_EVIDENCE` — Evidence obtained outside the declared scope
+- `CLAIM_EVIDENCE_ADMISSIBLE` — Claim is supported entirely by authorized evidence
+- `CLAIM_REQUIRES_REAUDIT` — Claim cannot be relied on until scoped audit is repeated
 
 ### Important Principle
 
@@ -320,6 +327,58 @@ Do not collapse:
 - `STALE` (changed since audit)
 
 Each has different governance implications.
+
+### Audit Scope Provenance
+
+An audit must preserve evidence provenance by recording both the declared scope and the actual evidence used.
+
+Required scope provenance fields:
+
+- `Declared_Surface_ID`
+- `Actual_Surface_ID`
+
+### Scope Breach Rule
+
+`AUDIT_SCOPE_BREACH` does NOT automatically invalidate every claim in the audit.
+
+When an audit exceeds its declared surface:
+
+1. record the originally authorized `Surface_ID` / scope;
+2. record the actual additional surface used;
+3. identify every `Claim_ID` affected by the additional evidence;
+4. separate findings supported entirely by the authorized surface;
+5. classify evidence derived from the undeclared surface separately;
+6. do NOT present out-of-scope evidence as if it came from the declared surface;
+7. determine whether the extra evidence may have materially influenced conclusions;
+8. if material influence cannot be excluded, repeat the affected audit under a clean declared scope.
+
+### Claim-Level Salvage Rule
+
+A scope breach may contaminate the audit record without invalidating every claim.
+
+Example:
+
+```text
+Declared audit:
+LOCAL_GIT
+
+Actual observation:
+LOCAL_GIT + PUBLIC_UNAUTHENTICATED_SURFACE
+
+Claim A:
+supported only by LOCAL_GIT
+→ CLAIM_EVIDENCE_ADMISSIBLE
+
+Claim B:
+supported by public web observation
+→ reclassify as S5 evidence or exclude from the S2 audit result
+
+Audit-level result:
+AUDIT_SCOPE_BREACH
+
+Gate impact:
+reconcile provenance before relying on the audit as a whole
+```
 
 ---
 
@@ -411,6 +470,7 @@ Two audits produce materially different findings about the same claim.
    - **compatible** (different aspects of same truth)
    - **different-surface truths** (each surface-bound result is correct in its domain)
    - **genuinely contradictory** (logical incompatibility)
+7. **Separate** any `AUDIT_SCOPE_BREACH` from claim-level divergence
 
 ### Example
 
@@ -424,6 +484,14 @@ Two audits produce materially different findings about the same claim.
 - Findings are NOT contradictory
 - They reveal a `SURFACE_PARITY_FAIL`: public rendering is stale
 - Correction required before publication
+
+### Scope Breach Relation
+
+`AUDIT_SCOPE_BREACH` is NOT automatically `AUDIT_DIVERGENCE`.
+
+- `AUDIT_SCOPE_BREACH` concerns evidence provenance and audit execution
+- `AUDIT_DIVERGENCE` concerns materially different findings about the same claim
+- They may coexist
 
 ### Publication Gate
 
@@ -898,6 +966,18 @@ If any fail condition exists:
 - ✓ DO document failure cause
 - ✓ DO require explicit waiver (rare) or correction (normal)
 
+### Material Scope Breach Fail-Closed Condition
+
+`UNRESOLVED_MATERIAL_AUDIT_SCOPE_BREACH`
+
+Publication must stop when:
+
+- an audit used undeclared evidence surfaces;
+- the affected claims are material to the publication gate;
+- and provenance/admissibility has not been reconciled.
+
+Do not make every trivial scope deviation automatically block publication. The condition is material and unresolved.
+
 ---
 
 ## SECTION 22 — RELATIONSHIP_TO_EXISTING_GOVERNANCE
@@ -945,7 +1025,7 @@ Extends:
 
 ## INTEGRATION WITH EXISTING FRAMEWORK
 
-This protocol is integrated into the Framework governance discovery path via reference in [repository-governance-standard.md](/path/to/repository-governance-standard.md), which already governs promotion discipline.
+This protocol is integrated into the Framework governance discovery path via reference in [repository-governance-standard.md](repository-governance-standard.md), which already governs promotion discipline.
 
 **Discovery Path:**
 
@@ -965,5 +1045,8 @@ This protocol is integrated into the Framework governance discovery path via ref
 
 **First Remediation Case:** This protocol will be applied to fix identified SAD-MORON Architecture V1 public-surface defects as the initial prepublication test case.
 
-**Validation:** This protocol underwent the discipline it defines before public canonical publication.
+**Validation State:** PREPUBLICATION INTERCONSULTATION IN PROGRESS
 
+This protocol remains a local candidate.
+The complete discipline defined by this protocol has NOT yet been completed.
+Further audit and reconciliation are required before any canonical publication.
