@@ -2,13 +2,16 @@
 
 ## Status
 
-**DRAFT — PENDING HUMAN RATIFICATION**
+**RATIFIED — HUMAN PROJECT GOVERNANCE AUTHORITY**
 
 - version: V1
 - scope: governance infrastructure and repository roles within SAD-MORON ecosystem
 - evidence basis: demonstrated repository posture + ratified human decisions from this alignment initiative
-- publication state: LOCAL_ONLY — the architecture draft and supporting alignment commits have not yet been promoted or pushed to their governed origin branches
-- ratification: awaiting institutional review
+- ratification date: 2026-08-04
+- ratification authority: Human project governance authority
+- publication state: LOCAL_ONLY — ratified but not yet merged to origin/main
+- institutional adoption: NOT CLAIMED — no official DGCyE adoption, provincial adoption, or production authorization implied
+- open decisions: 15 items marked OPEN — HUMAN DECISION REQUIRED remain unresolved
 
 ---
 
