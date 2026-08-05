@@ -123,6 +123,19 @@ Domain implementations may specialize workflow, taxonomy, execution, and operati
 
 Lower layers may not silently redefine governance meaning inherited from the framework layer.
 
+### Prepublication Gates and Audit Surfaces Extension
+
+The governance inheritance chain is extended by **SAD_AUDIT_SURFACES_AND_PROMOTION_GATES_V1.md**, which establishes the prepublication discipline for multi-surface evidence reconciliation before canonical promotion.
+
+This extension governs:
+- audit surface discovery before promotion
+- evidence collection across independent surfaces
+- audit divergence reconciliation
+- human publication gate authority
+- post-publication integrity verification
+
+See [docs/SAD_AUDIT_SURFACES_AND_PROMOTION_GATES_V1.md](SAD_AUDIT_SURFACES_AND_PROMOTION_GATES_V1.md) for normative protocol.
+
 ## Recommended Repository Structure
 
 Recommended repository areas include:
