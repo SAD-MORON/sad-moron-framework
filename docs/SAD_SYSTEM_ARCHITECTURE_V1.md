@@ -9,7 +9,7 @@
 - evidence basis: demonstrated repository posture + ratified human decisions from this alignment initiative
 - ratification date: 2026-08-04
 - ratification authority: Human project governance authority
-- publication state: PUBLISHED_TO_ORIGIN_BRANCH — architecture branch published to origin/docs/system-architecture-v1; NOT YET MERGED TO ORIGIN/MAIN
+- publication state: PUBLISHED_TO_ORIGIN_MAIN
 - institutional adoption: NOT CLAIMED — no official DGCyE adoption, provincial adoption, or production authorization implied
 - open decisions: 15 items marked OPEN — HUMAN DECISION REQUIRED remain unresolved
 
@@ -642,7 +642,7 @@ Pilot Artifact (in Labs or private context)
 
 | Architectural Element | Current Status | Evidence Class | Notes |
 |---|---|---|---|
-| Governance infrastructure separation | RATIFIED_HUMAN_DECISION / PUBLISHED_TO_ORIGIN_BRANCH — NOT YET ORIGIN/MAIN | evidence from Step 3 alignment | documented in Framework, Connectors, AppScript, Access Governance; commit c264afc; branch published, not yet merged to main |
+| Governance infrastructure separation | RATIFIED_HUMAN_DECISION / PUBLISHED_TO_ORIGIN_MAIN | evidence from Step 3 alignment | documented in Framework, Connectors, AppScript, Access Governance; commit c264afc; merged via PR #2 |
 | Runtime Governance definition | RATIFIED_HUMAN_DECISION / PUBLISHED_TO_ORIGIN_MAIN | evidence from Step 1 alignment | documented in SAD-MORON-RUNTIMES; commit 49b0956; merged via PR #1 |
 | Labs private pilot role | RATIFIED_HUMAN_DECISION / PUBLISHED_TO_ORIGIN_MAIN | evidence from Step 2 alignment | private repository (DEMONSTRATED), role decision promoted via commit a91f30e5 and PR #17 |
 | Framework governance anchor | DEMONSTRATED | observed repository posture | public repository, governance-first |
