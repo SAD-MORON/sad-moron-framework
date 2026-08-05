@@ -132,7 +132,7 @@ Promotion of a governance or operational artifact means its incorporation into a
 
 **Operational secrets?** NO — explicitly excludes credentials and personal data
 
-**Current status:** DEMONSTRATED — private or restricted repository, governance-first, fully documented
+**Current status:** DEMONSTRATED — PUBLIC governance infrastructure, governance-first, fully documented
 
 **Evidence:** Repository posture verified in `README.md`, `docs/identity-model.md`, `docs/electronic-acceptance-boundary.md`
 
@@ -162,7 +162,7 @@ Promotion of a governance or operational artifact means its incorporation into a
 
 **Operational secrets?** NO — governance packs and synthetic examples only
 
-**Current status:** DEMONSTRATED — private or restricted repository, governance-first, fully documented
+**Current status:** DEMONSTRATED — PUBLIC governance infrastructure, governance-first, fully documented
 
 **Evidence:** Repository posture verified in `README.md`, `docs/connector-layer-boundary.md`, `docs/connector-public-private-boundary.md`
 
@@ -192,7 +192,7 @@ Promotion of a governance or operational artifact means its incorporation into a
 
 **Operational secrets?** NO — explicitly excludes production identifiers and configuration
 
-**Current status:** DEMONSTRATED — private repository, governance-first documentation with reference patterns, full audit boundaries documented
+**Current status:** DEMONSTRATED — PUBLIC governance infrastructure, governance-first documentation with reference patterns, full audit boundaries documented
 
 **Evidence:** Repository posture verified in `README.md`, `docs/deployment-boundaries.md`, `docs/script-id-governance.md`, `docs/governance-boundary-map.md`
 
@@ -643,9 +643,9 @@ Pilot Artifact (in Labs or private context)
 | Runtime Governance definition | RATIFIED_HUMAN_DECISION / LOCAL_ONLY | evidence from Step 1 alignment | documented in SAD-MORON-RUNTIMES; commit 49b0956; not published |
 | Labs private pilot role | RATIFIED_HUMAN_DECISION / LOCAL_ONLY | evidence from Step 2 alignment | private repository (DEMONSTRATED), role decision in commit 4adc013; not published |
 | Framework governance anchor | DEMONSTRATED | observed repository posture | public repository, governance-first |
-| AppScript governance patterns | DEMONSTRATED | observed repository posture | private repository, reference implementations with audit boundaries |
-| Connectors contract layer | DEMONSTRATED | observed repository posture | private repository, contract definitions and compliance packs |
-| Access Governance layer | DEMONSTRATED | observed repository posture | private repository, identity and access governance |
+| AppScript governance patterns | DEMONSTRATED | observed repository posture | PUBLIC governance infrastructure, reference implementations with audit boundaries |
+| Connectors contract layer | DEMONSTRATED | observed repository posture | PUBLIC governance infrastructure, contract definitions and compliance packs |
+| Access Governance layer | DEMONSTRATED | observed repository posture | PUBLIC governance infrastructure, identity and access governance |
 | 5650 pilot system | PARTIALLY_DEMONSTRATED | code and workflows in Labs | pilot character maintained, no production claim |
 | Art.109 bounded context | DEMONSTRATED_LOCAL_ONLY | separate administrative processes | local unpublished branch; intentionally separate from 5650, no integration contract; not on origin/main |
 | Institutional source acquisition | RATIFIED_DECISION | governance framework defined | implementation FUTURE |
