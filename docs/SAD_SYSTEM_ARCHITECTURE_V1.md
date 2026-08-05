@@ -224,7 +224,7 @@ Runtime Governance establishes the contracts, boundaries, technical identity, ex
 | **Runtime Evidence** | What did the software execute, under what conditions, with what observable result? | System behavior documentation |
 | **Administrative Audit** | What happened administratively, who acted, under what authority, with what evidence? | Institutional review and accountability |
 
-**Current status:** RATIFIED DECISION / LOCAL_ONLY — definition established in Step 1 alignment, awaiting external ratification
+**Current status:** PUBLISHED_TO_ORIGIN_MAIN — validated Runtime Governance alignment merged via Runtime PR #1
 
 **Evidence:** Documented in SAD-MORON-RUNTIMES `docs/runtime-scope.md` and cross-referenced governance documents
 
@@ -256,7 +256,7 @@ These are intentionally deferred pending:
 
 **Purpose:** experimentation → integration → validation → evidence production → human promotion decision → governed destination
 
-**Current status:** RATIFIED DECISION / LOCAL_ONLY — role established in Step 2 alignment
+**Current status:** PUBLISHED_TO_ORIGIN_MAIN — validated Labs role clarification merged via Labs PR #17
 
 **Key principles:**
 
@@ -642,9 +642,9 @@ Pilot Artifact (in Labs or private context)
 
 | Architectural Element | Current Status | Evidence Class | Notes |
 |---|---|---|---|
-| Governance infrastructure separation | RATIFIED_HUMAN_DECISION / LOCAL_ONLY | evidence from Step 3 alignment | documented in Framework, Connectors, AppScript, Access Governance; commit c264afc; not published |
-| Runtime Governance definition | RATIFIED_HUMAN_DECISION / LOCAL_ONLY | evidence from Step 1 alignment | documented in SAD-MORON-RUNTIMES; commit 49b0956; not published |
-| Labs private pilot role | RATIFIED_HUMAN_DECISION / LOCAL_ONLY | evidence from Step 2 alignment | private repository (DEMONSTRATED), role decision in commit 4adc013; not published |
+| Governance infrastructure separation | RATIFIED_HUMAN_DECISION / PUBLISHED_TO_ORIGIN_BRANCH — NOT YET ORIGIN/MAIN | evidence from Step 3 alignment | documented in Framework, Connectors, AppScript, Access Governance; commit c264afc; branch published, not yet merged to main |
+| Runtime Governance definition | RATIFIED_HUMAN_DECISION / PUBLISHED_TO_ORIGIN_MAIN | evidence from Step 1 alignment | documented in SAD-MORON-RUNTIMES; commit 49b0956; merged via PR #1 |
+| Labs private pilot role | RATIFIED_HUMAN_DECISION / PUBLISHED_TO_ORIGIN_MAIN | evidence from Step 2 alignment | private repository (DEMONSTRATED), role decision promoted via commit a91f30e5 and PR #17 |
 | Framework governance anchor | DEMONSTRATED | observed repository posture | public repository, governance-first |
 | AppScript governance patterns | DEMONSTRATED | observed repository posture | PUBLIC governance infrastructure, reference implementations with audit boundaries |
 | Connectors contract layer | DEMONSTRATED | observed repository posture | PUBLIC governance infrastructure, contract definitions and compliance packs |
