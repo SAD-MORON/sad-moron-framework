@@ -9,7 +9,7 @@
 - evidence basis: demonstrated repository posture + ratified human decisions from this alignment initiative
 - ratification date: 2026-08-04
 - ratification authority: Human project governance authority
-- publication state: LOCAL_ONLY — ratified but not yet merged to origin/main
+- publication state: PUBLISHED_TO_ORIGIN_BRANCH — architecture branch published to origin/docs/system-architecture-v1; NOT YET MERGED TO ORIGIN/MAIN
 - institutional adoption: NOT CLAIMED — no official DGCyE adoption, provincial adoption, or production authorization implied
 - open decisions: 15 items marked OPEN — HUMAN DECISION REQUIRED remain unresolved
 
